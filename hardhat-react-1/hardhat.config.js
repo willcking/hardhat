@@ -1,6 +1,8 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
 
+require("./tasks/faucet");
+
 require('dotenv').config();
 
 const privateKey = process.env.PRIVATE_KEY;

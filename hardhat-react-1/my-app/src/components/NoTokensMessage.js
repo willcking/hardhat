@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
-export function NoTokensMessage({ deployContract }) {
+export function NoTokensMessage({ selectedAddress }) {
   return (
     <>
       <p>You don't have tokens to transfer</p>
-      <button
-        className="btn btn-warning"
-        type="button"
-        onClick={deployContract}
-      >
-        Try to deploy a ERC20 contract, and get the initial tokens.
-      </button>
+      <p>
+        To get some tokens, open a terminal in the root of the repository and run: 
+        <br />
+        <br />
+        <code>npx hardhat --network localhost faucet {selectedAddress}</code>
+      </p>
     </>
-  )
+  );
 }
